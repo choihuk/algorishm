@@ -1,2 +1,2 @@
 # algorishm
-프로그래머스 알고리즘 문제 풀이 저장소(algorithm solution repository)
+알고리즘 저장소

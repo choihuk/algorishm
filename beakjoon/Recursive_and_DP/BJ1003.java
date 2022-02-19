@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main{
+public class BJ1003{
     private static Map<Integer,int[]> map;
     
     public static void main(String[] args) throws IOException{

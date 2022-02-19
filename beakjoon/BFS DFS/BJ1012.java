@@ -8,8 +8,10 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Iterator;
-
-public class Main {
+// HashSet에 int array를 넣으려 했으나 set.remove시 equals 메소드를 통해
+// 같은 배열인지 확인하는 작업이 불가능했기에 List<Integer>를 사용하여 
+// List의 Override된 equals를 활용하여 구현함. 
+public class BJ1012 {
     private static int[][] dir = {{0,1},{1,0},{-1,0},{0,-1}};
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -6,6 +6,15 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 public class BJ1260{
+    // DFS는 재귀를 이용하여, BFS는 큐를 이용하여 풂.
+    // DFS, BFS에서 한 노드에서 갈 수 있는 노드 중 가장 작은 노드부터 방문한다는 조건이 있었기에
+    // 매트릭스에서 순서대로 뽑아서 큐에 넣을 수 있었음. 좀 더 까다로운 조건이 주어진다면 조건 추가해서 큐에 넣어야 할 듯.
+    
+    // DFS, BFS의 핵심은 이 노드가 방문을 한 노드인지 확인하는 방법을 구현하는 것인데 
+    // 만약 방문을 했다면 resultQueue에 들어갔기에 resultQueue를 확인하는 방식으로 구현함.
+    // 원래라면 각 노드들이 자신이 방문되었는지 상태를 가지고 있어야 할 듯..?
+    
+    // 효율면에서 매트릭스를 이차원 배열로 구현하는 것이 아닌 node array를 만들고 array 안에 노드들이 갈 수 있는 다른 노드들의 포인터가 담긴 arraylist를 갖고 있는 형태로 구현하는 것이 이득임.
     private static int[][] matrix;
     private static Queue<Integer> resultD;
     private static Queue<Integer> resultB;

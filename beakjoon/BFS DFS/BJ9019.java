@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+// ...
 public class BJ9019{
     private static String B;
     private static HashSet<String> set;
@@ -20,7 +21,6 @@ public class BJ9019{
             String result = cal(A);
             System.out.println(result);
         }
-        
     }
     
     static class Box{

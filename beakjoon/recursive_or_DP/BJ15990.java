@@ -9,12 +9,12 @@ public class BJ15990{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
+        memo = new int[100001][4];
+        for(int i=0; i<100001; i++){
+            Arrays.fill(memo[i], -1);
+        }
         while(T-- > 0){
             n = Integer.parseInt(br.readLine());
-            memo = new int[100001][4];
-            for(int i=0; i<100001; i++){
-                Arrays.fill(memo[i], -1);
-            }
             int result = 0;
             result = DFS(n,0);
             System.out.println(result);

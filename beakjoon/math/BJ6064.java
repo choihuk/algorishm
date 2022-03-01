@@ -13,24 +13,21 @@ public class BJ6064{
             int N = Integer.parseInt(st.nextToken());
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
-            int result = -1;
-            int gcd = getGCD(M,N);
-            gcd = (M*N)/gcd;
+            int result = 0;
             int a = 0;
-            for(int i=0; a<=gcd; i++){
-                a = M*i + x;
-                if(y == a%N){
-                    result = a;
+            int b = 0;
+            while(M*b+x < M*N){
+                if(a < y-x){
+                    a += M; b++;
+                }else if(a > y-x){
+                    a -= N;
+                }else{
                     break;
                 }
             }
+            if(a!=y-x) result = -1;
+            else result = M*b+x;
             System.out.println(result);
         }
-    }
-     public static int getGCD(int a, int b) {
-        if (a % b == 0) {
-            return b;
-        }
-        return getGCD(b, a%b);
     }
 }

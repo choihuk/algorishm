@@ -21,6 +21,7 @@ public class BJ14501{
         System.out.println(DFS(1));
         br.close();
     }
+    private int a(){return 0;}
     private static int DFS(int d){
         if(d>N) return 0;
         if(d+day[d]-1>N) return DFS(d+1);

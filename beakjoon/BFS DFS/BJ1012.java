@@ -18,7 +18,6 @@ public class BJ1012 {
         int insertCount = Integer.parseInt(br.readLine());
         for(int i=0; i<insertCount; i++){
             HashSet<List<Integer>> set = new HashSet<>();
-            
             StringTokenizer st = new StringTokenizer(br.readLine());
             st.nextToken();st.nextToken();
             int k = Integer.parseInt(st.nextToken());

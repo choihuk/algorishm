@@ -22,5 +22,6 @@ public class BJ10845 {
             }
         }
         System.out.println(sb.toString());
+        br.close();
     }
 }
